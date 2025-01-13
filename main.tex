@@ -1,0 +1,205 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+\usepackage{fontawesome}
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{ Kobe Dieryck}{}{Maintenance Technician || Electronic engineer || Programmer}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+% \backgroundcolor{c[1]}[rgb]{1,1,0.8}  %cream yellow for column-1 
+% \backgroundcolor{g}[rgb]{0.8,1,1}  
+% \backgroundcolor{l}[rgb]{0,0,0.7}  %dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{kobe.JPEG}
+\end{center}
+
+\bg{cvgreen}{white}{About me}\\[0.5em]
+
+{\footnotesize
+Dutch as native language, experienced in English. Has a good understanding of/Experience in Electronics, Mechanics, CNC milling and turning, CAD and 3D printing.
+
+\bigskip
+
+\bg{cvgreen}{white}{Personal} \\[0.5em]
+Kobe Dieryck
+
+nationality: Belgian 
+
+2003
+
+\bigskip
+
+\bg{cvgreen}{white}{Areas of specialization} \\[0.5em]
+
+Mechanics ~•~ Programming ~•~ Electronics ~•~ Cameras
+
+\bigskip
+
+
+
+\bigskip
+
+\bg{cvgreen}{white}{Interests \& Passions}\\[0.5em]
+
+camera's, programming, 3D printing, electronics and all related fields.
+\bigskip
+
+\bg{cvgreen}{white}{Strengths}\\[0.5em]
+
+Eager to learn ~•~ Out of the box thinker ~•~ Creative Designer
+
+\vspace{4em}
+
+%\infobubble{\faAt}{cvgreen}{white}{kobe.dieryck@icloud.com}
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/kobe-dieryck/}{kobe-dieryck}}
+%\infobubble{\faFacebook}{cvgreen}{white}{Jack Sparrow}
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/TheNeg0t1ator}{TheNeg0t1ator}}
+\infobubble{\faCameraRetro}{cvgreen}{white}{\href{https://photo.the-ko.be}{Photo-blog}}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Degrees}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{ }{Mechanical Design}{Secundary}{PSSB \color{headerblue}}{}{fav-pssb.png} \\
+    \cvdegree{ }{Maintenance Technician}{Se-n-Se}{PSSB \color{headerblue}}{}{fav-pssb.png} \\
+    \cvdegree{Studying}{Electronical Engineer}{Bachelor}{PXL \color{headerblue}}{}{pxl.png}
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Skills}
+\begin{tabular}{l @{\hspace{0.5em}}l}
+     % \bg{white}{iconcolour}{C/C++} & \barrule{0.45}{0.5em}{cvpurple}\\
+     % \bg{white}{iconcolour}{VHDL} & \barrule{0.23}{0.5em}{cvpurple} \\
+     % \bg{white}{iconcolour}{Frontend} &  \barrule{0.35}{0.5em}{cvpurple}\\
+     % \bg{white}{iconcolour}{CAD} & \barrule{0.55}{0.5em}{cvpurple} \\
+     % \bg{white}{iconcolour}{PCB-Design} & \barrule{0.30}{0.5em}{cvpurple} \\
+Programming & C, C++, Rust, Bash,                                                                  \\
+            & VHDL, Python,                                                                      \\
+            & Front end Web,                                                                    \\
+            & Structured text Latex       \\
+Tools       & Altium, KiCAD   \\
+            & Inventor, Fusion360                                                           \\
+            & Xilinx Vivado, Vitis                                                          \\
+            & Wireshark                                                                        \\
+Mechanical  & Tig, Mig, MMA welding                                                            \\
+            & Milling, Turning, Hydraulics                                                             \\
+            & Pneumatics, Soldering      
+\end{tabular}
+\end{minipage}
+
+\section*{Work Experience}
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{}{KS-Metaalwerken}{Internship in Production}{Vliermaalroot \color{cvgreen}}{High-value production of CNC produced parts from various sources, including milling (5 axis), turning (7 axis)  and drilling. In high-grade steels, and alumina.}{logoks.png} \\
+    \cvevent{}{Carglass EDC Belron}{Logistics}{Bilzen \color{cvgreen}}{Fulltime student logistics, inventory, pick-and placing }{carglass.png}\\
+\end{tabular}
+\vspace{2em}
+
+\section*{Projects}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    %\cvevent{2022--2023}{Soldeerstation}{Lead}{PXL \color{cvgreen}}{I designed a high-power soldering station from scratch, including case and PCB, based on Elektor magazine release 507. Minimalist design with easy iron swapping. A successful outcome despite some challenges.}{pxl.png} \\
+    \cvevent{2019--2020}{3D-Printing a drone}{Research}{Tongeren \color{cvgreen}}{I gained valuable experience by 3D printing and testing a drone for fun. Through experimenting with various materials and learning about electronics and 3D printing, I acquired knowledge and skills. My efforts were recognized with an sg-psol nomination.}{Drone-foto.jpg}\\
+
+    \cvevent{2023--2024}{LED Game tiles}{R\&D}{Corda Campus \color{cvgreen}}{In this project we were tasked to create tiles. These tiles are controlled by one master over rs485. The tiles were written in micropython, and used an oop structure. A game would be run on the master tile, and displayed on the tile array.  The game could then be played on the whole array.In this project we were tasked to create tiles. These tiles are controlled by one master over rs485. The tiles were written in micropython, and used an oop structure. A game would be run on the master tile, and displayed on the tile array.  The game could then be played on the whole array.}{tiles.png}
+    
+\end{tabular}
+\vspace{2em}
+
+
+
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Languages}
+\begin{tabular}{l | ll}
+\textbf{Dutch} &  & {\phantom{x}\footnotesize Native language} \\
+\textbf{English} & & \pictofraction{\faCircle}{cvgreen}{4}{black!30}{1}{\tiny} \\
+\textbf{French} &  & \pictofraction{\faCircle}{cvgreen}{2}{black!30}{3}{\tiny} \\
+ &  & 
+\end{tabular}
+\bigskip
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Certificates}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
+    2019 \& 2022 & Nomination SG-PSOL x2 \\
+    2022 & Limtec Bearing Technics \\
+    2022 & VCA Certificate\\
+    2024 & NVIDIA DLI
+\end{tabular}
+\bigskip
+\end{minipage}
+
+
+
+\vspace{1em}
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Kobe Kris Wim Dieryck \icon{\faMapMarker}{cvgreen}{} \href{https://maps.app.goo.gl/CwT1sixW7RU7vn4p6}{Tongeren} \icon{\faPhone}{cvgreen}{} \href{tel:+32468107431}{+32 468 10 74 31} \icon{\faAt}{cvgreen}{} \protect\href{mailto:kobe.dieryck@icloud.com}{kobe.dieryck@icloud.com}\newline
+}
+\end{center}
+\end{minipage}
+}
+\end{paracol}
+
+\end{document}
